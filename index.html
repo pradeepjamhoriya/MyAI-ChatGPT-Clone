@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MyAI - ChatGPT Clone</title>
+    <meta name="description" content="A full-stack ChatGPT clone powered by Google Gemini with user authentication, persistent chat history, and conversation management." />
+    <meta property="og:title" content="MyAI - ChatGPT Clone" />
+    <meta property="og:description" content="A full-stack ChatGPT clone powered by Google Gemini with user authentication, persistent chat history, and conversation management." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script>
+      // Ensure window.fetch is writable and configurable for browser extensions and test executors
+      try {
+        if (typeof window !== 'undefined' && window.fetch) {
+          let _activeFetch = window.fetch.bind(window);
+          Object.defineProperty(window, 'fetch', {
+            get() {
+              return _activeFetch;
+            },
+            set(newFetch) {
+              _activeFetch = newFetch;
+            },
+            configurable: true,
+            enumerable: true,
+          });
+        }
+      } catch (e) {
+        // Fallback silently if not allowed
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
